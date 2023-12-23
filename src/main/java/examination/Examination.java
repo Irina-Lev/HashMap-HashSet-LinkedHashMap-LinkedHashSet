@@ -1,14 +1,9 @@
 package examination;
-//      [x]  • добавить сдачу студента(в зачет идет только последняя сдача,хранить все сдачи студента по одному и тому же предмету не нужно)
-//      [x]  • получить сдачу студента по имени, фамилии и предмету
-//      [x]  • вывод средней оценки по предмету
-//      [x]  •  вывод тех студентов,кто сдавал более одного раза
-//      [x]  • вывод последних пяти студентов,сдавших на отлично
-//      [x]  • вывод всех сданных предметов
+
 
 import java.util.Date;
-import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 
 public interface Examination {
@@ -21,5 +16,5 @@ public interface Examination {
 
     List<Exam> getListStudents();
 
-    HashSet<String> allSubjects();
+    Set<String> allSubjects();
 }

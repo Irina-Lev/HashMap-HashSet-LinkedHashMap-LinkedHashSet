@@ -3,18 +3,24 @@ package examination;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
-public class CashedExamination implements CashExamination {
+public class CaсhedExamination implements CashExamination {
 
     Map<String, Double> cashed = new LRUCache<>(2);
     private final InMemoryExamination inMemoryExamination;
-    public CashedExamination(InMemoryExamination inMemoryExamination) {
+    public CaсhedExamination(InMemoryExamination inMemoryExamination) {
         this.inMemoryExamination = inMemoryExamination;
     }
 
 
     @Override
     public Double averageGrade(String subject) {
-        return cashed.computeIfAbsent(subject, inMemoryExamination::averageGrade);
+        if (cashed.containsKey(subject)){
+            return cashed.get(subject);
+        }else {
+            double average = inMemoryExamination.averageGrade(subject);
+            cashed.put(subject, average);
+            return  average;
+        }
     }
 }
 

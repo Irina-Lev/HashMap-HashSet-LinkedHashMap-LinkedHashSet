@@ -2,8 +2,6 @@ package examination;
 
 import java.util.*;
 import java.util.stream.Collectors;
-
-import static java.util.Comparator.comparing;
 import static java.util.Comparator.reverseOrder;
 
 
@@ -65,8 +63,8 @@ public  class InMemoryExamination implements Examination {
     }
 
     @Override
-    public HashSet<String> allSubjects() {
-        return (HashSet<String>) examinations.values().stream().map(Exam::subject).collect(Collectors.toSet());
+    public Set<String> allSubjects() {
+        return  examinations.values().stream().map(Exam::subject).collect(Collectors.toSet());
     }
 
 

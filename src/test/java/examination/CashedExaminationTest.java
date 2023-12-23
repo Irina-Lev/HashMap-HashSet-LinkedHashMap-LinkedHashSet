@@ -4,16 +4,12 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import java.util.Date;
-import java.util.List;
-import java.util.TreeMap;
 import java.util.UUID;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 class CashedExaminationTest {
     private final ExaminationWithCount examinationWithCount = new ExaminationWithCount();
 
-    private  final CashedExamination cashedExamination = new CashedExamination(examinationWithCount);
+    private  final CaсhedExamination cashedExamination = new CaсhedExamination(examinationWithCount);
 
     @Test
     void testCashedAverageGrade() {
