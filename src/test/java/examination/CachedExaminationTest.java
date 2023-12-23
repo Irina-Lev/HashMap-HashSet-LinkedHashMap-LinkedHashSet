@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Test;
 import java.util.Date;
 import java.util.UUID;
 
-class CashedExaminationTest {
+class CachedExaminationTest {
     private final ExaminationWithCount examinationWithCount = new ExaminationWithCount();
 
     private  final CaсhedExamination cashedExamination = new CaсhedExamination(examinationWithCount);
